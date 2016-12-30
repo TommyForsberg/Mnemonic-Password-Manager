@@ -1,0 +1,9 @@
+C:\Users\Tommy\Documents\Visual Studio 2015\Projects\MnemonicPwManager\MnemonicPwManager\obj\Release\android\assets\MnemonicPwManager.dll
+C:\Users\Tommy\Documents\Visual Studio 2015\Projects\MnemonicPwManager\MnemonicPwManager\obj\Release\android\assets\Java.Interop.dll
+C:\Users\Tommy\Documents\Visual Studio 2015\Projects\MnemonicPwManager\MnemonicPwManager\obj\Release\android\assets\Mono.Android.dll
+C:\Users\Tommy\Documents\Visual Studio 2015\Projects\MnemonicPwManager\MnemonicPwManager\obj\Release\android\assets\mscorlib.dll
+C:\Users\Tommy\Documents\Visual Studio 2015\Projects\MnemonicPwManager\MnemonicPwManager\obj\Release\android\assets\System.Core.dll
+C:\Users\Tommy\Documents\Visual Studio 2015\Projects\MnemonicPwManager\MnemonicPwManager\obj\Release\android\assets\System.dll
+C:\Users\Tommy\Documents\Visual Studio 2015\Projects\MnemonicPwManager\MnemonicPwManager\obj\Release\android\assets\System.Xml.dll
+C:\Users\Tommy\Documents\Visual Studio 2015\Projects\MnemonicPwManager\MnemonicPwManager\obj\Release\android\assets\System.Runtime.Serialization.dll
+C:\Users\Tommy\Documents\Visual Studio 2015\Projects\MnemonicPwManager\MnemonicPwManager\obj\Release\android\assets\System.ServiceModel.Internals.dll
