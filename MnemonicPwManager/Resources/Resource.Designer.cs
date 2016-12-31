@@ -80,7 +80,7 @@ namespace MnemonicPwManager
 			public const int bookSpinner = 2131099651;
 			
 			// aapt resource value: 0x7f06000b
-			public const int button1 = 2131099659;
+			public const int copyButton = 2131099659;
 			
 			// aapt resource value: 0x7f06000a
 			public const int generateButton = 2131099658;

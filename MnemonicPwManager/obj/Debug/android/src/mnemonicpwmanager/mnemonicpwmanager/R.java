@@ -18,7 +18,7 @@ public final class R {
     }
     public static final class id {
         public static final int bookSpinner=0x7f060003;
-        public static final int button1=0x7f06000b;
+        public static final int copyButton=0x7f06000b;
         public static final int generateButton=0x7f06000a;
         public static final int mnemonicText=0x7f060009;
         public static final int numberPicker=0x7f060001;

@@ -15,90 +15,82 @@ using System.IO;
 
 namespace MnemonicPwManager
 {
-    public class RandomWord
+    class RandomWord
     {
-        List<string[]> SplittedText { get; set; }
-        public int WordLength { get; set; }
-        public bool Numbers { get; set; }
-        public int AmountOfNumbers { get; set; }
-        public string NewWord { get; set; }
-        public string NewSentence { get; set; }
+        int _wordLength;
+        List<string> _passwordMnemonics;
+        bool _numbers;
+        int _amountOfNumbers;
+        public string NewWord { get; private set; }
+        public string NewSentence { get; private set; }
         
-        public RandomWord(int WordLength, string text, bool Numbers, int AmountOfNumbers)
+        public RandomWord(int WordLength, string text, bool _numbers, int _amountOfNumbers)
         {
-
-            SplitTextIntoSentenceArrays(text);
-            this.AmountOfNumbers = AmountOfNumbers;
-            this.Numbers = Numbers;
-            if (Numbers == true)
-                this.WordLength = WordLength - AmountOfNumbers;
+            this._amountOfNumbers = _amountOfNumbers;
+            this._numbers = _numbers;
+            if (_numbers == true)
+                _wordLength = WordLength - _amountOfNumbers;
             else
-                this.WordLength = WordLength;
+                _wordLength = WordLength;
 
-            GenerateRandomSentence();
+           _passwordMnemonics = GenerateRandomSentence(SplitTextIntoSentenceArrays(text));
+            NewWord = GenerateMnemonicString();
         }
 
-        public void SplitTextIntoSentenceArrays(string text)
+        List<string[]> SplitTextIntoSentenceArrays(string text)
         {
             string[] separators = { "!", ".", "?" };
             var sentences = text.Split(separators, StringSplitOptions.RemoveEmptyEntries);
-            SplittedText = new List<string[]>();
+            var splittedText = new List<string[]>();
             int index = 0;
             foreach (var sentence in sentences)
             {
-                SplittedText.Add(sentences[index].Split(default(string[]), StringSplitOptions.RemoveEmptyEntries));
+                splittedText.Add(sentences[index].Split(default(string[]), StringSplitOptions.RemoveEmptyEntries));
                 index++;
             }
+            return splittedText;
         }
 
-        void GenerateRandomSentence()
+        List<string> GenerateRandomSentence(List<string[]> SplittedText)
         {
-            var selectedArrays = SplittedText.Where(array => array.Count().Equals(WordLength)).ToArray();
+            //Collects all sentences as arrays with as many words as password should be long in a list with arrays.
+            var selectedArrays = SplittedText.Where(array => array.Count().Equals(_wordLength)).ToArray();
 
+            //Picks one of the sentences at random
             Random rnd = new Random();
             int number = rnd.Next(0, selectedArrays.Length);
             var randomSentence = selectedArrays[number];
-           
-                
-            var expandedArray = new List<string>(); //insertnumbers test
 
+            //Transfers the words in array to an expandable List.
+            var passwordMnemonics = new List<string>();
             for (int i = 0; i < randomSentence.Length; i++)
             {
-                expandedArray.Add(randomSentence[i]);
+                passwordMnemonics.Add(randomSentence[i]);
             }
-                #region insert random number
-                if (Numbers)
+
+            //Inserts numbers if true.
+            #region insert random number
+            if (_numbers)
             {
-                for (int i = 0; i < AmountOfNumbers; i++)
+                for (int i = 0; i < _amountOfNumbers; i++)
                 {
                     int randomNumber = rnd.Next(0, 9);
-                    int randomPlace = rnd.Next(0, expandedArray.Count);
-                    expandedArray.Insert(randomPlace, randomNumber.ToString());
+                    int randomPlace = rnd.Next(0, passwordMnemonics.Count);
+                    passwordMnemonics.Insert(randomPlace, randomNumber.ToString());
                 }
             }
             #endregion
+            return passwordMnemonics;
+        }
+        string GenerateMnemonicString() //Takes inital letters and builds a sentence.
+        { 
             string newSentence = string.Empty;
-            foreach (var word in expandedArray) //change to random sentence to roll back
+            foreach (var word in _passwordMnemonics)
             {
                 newSentence = string.Format(newSentence + word + " ");
             }
-
             NewSentence = newSentence;
-            NewWord = new string(expandedArray.Select(x => x[0]).ToArray()); //change to randomsentence to roll back
-
+            return new string(_passwordMnemonics.Select(x => x[0]).ToArray());
         }
-        //public string Randomizer() //Not In use
-        //{
-        //    string newWord = string.Empty;
-        //    char randomChar;
-        //    Random rnd = new Random();
-        //    int index= rnd.Next(0, Captions.Length);
-        //    for(int i = 0; i< WordLength; i++)
-        //    {
-        //        randomChar = Captions[rnd.Next(0, Captions.Length)];
-        //        newWord = newWord += randomChar;
-        //    }
-        //    return newWord;
-        //}
+        }
     }
-}

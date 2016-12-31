@@ -2,7 +2,7 @@
 <xs:schema xmlns:android="http://schemas.android.com/apk/res/android" attributeFormDefault="qualified" elementFormDefault="unqualified" targetNamespace="http://schemas.android.com/apk/res/android" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:annotation>
     <xs:documentation>v23</xs:documentation>
-    <xs:documentation>2016-12-31 11:55:04</xs:documentation>
+    <xs:documentation>2016-12-31 16:12:59</xs:documentation>
   </xs:annotation>
   <xs:attribute name="accessibilityLiveRegion">
     <xs:annotation>
@@ -16705,7 +16705,7 @@
             <xs:enumeration value="@+id/" />
             <xs:enumeration value="@+id/checkBox1" />
             <xs:enumeration value="@id/bookSpinner" />
-            <xs:enumeration value="@id/button1" />
+            <xs:enumeration value="@id/copyButton" />
             <xs:enumeration value="@id/generateButton" />
             <xs:enumeration value="@id/mnemonicText" />
             <xs:enumeration value="@id/numberPicker" />
