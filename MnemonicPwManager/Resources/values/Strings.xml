@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="BookChoices">
-      <item>The Iliad by Homer</item>
-      <item>Crime and punishment by Fyodor Dostoyevsky</item>
-      <item>The Odyssey by Homer</item>
-      <item>The Trial by Franz Kafka</item>
+      <item>The Iliad by Homer (Available offline)</item>
+      <item>Crime and punishment by Fyodor Dostoyevsky (Available offline)</item>
+      <item>The Odyssey by Homer (Online resource)</item>
+      <item>The Trial by Franz Kafka (Online resource)</item>
     </string-array>
     <string name="ApplicationName">MnemonicPwManager</string>
 </resources>
