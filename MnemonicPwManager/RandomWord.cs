@@ -39,7 +39,7 @@ namespace MnemonicPwManager
 
         List<string[]> SplitTextIntoSentenceArrays(string text)
         {
-            string[] separators = { "!", ".", "?" };
+            string[] separators = { "!", ". ", "?" };
             var sentences = text.Split(separators, StringSplitOptions.RemoveEmptyEntries);
             var splittedText = new List<string[]>();
             int index = 0;

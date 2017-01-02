@@ -2,7 +2,7 @@
 <xs:schema xmlns:android="http://schemas.android.com/apk/res/android" attributeFormDefault="qualified" elementFormDefault="unqualified" targetNamespace="http://schemas.android.com/apk/res/android" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:annotation>
     <xs:documentation>v23</xs:documentation>
-    <xs:documentation>2016-12-31 16:12:59</xs:documentation>
+    <xs:documentation>2017-01-02 14:46:50</xs:documentation>
   </xs:annotation>
   <xs:attribute name="accessibilityLiveRegion">
     <xs:annotation>
@@ -16712,10 +16712,10 @@
             <xs:enumeration value="@id/numberPickerNumbers" />
             <xs:enumeration value="@id/numberSwitch" />
             <xs:enumeration value="@id/passwordText" />
-            <xs:enumeration value="@id/textView1" />
-            <xs:enumeration value="@id/textView2" />
             <xs:enumeration value="@id/textView3" />
             <xs:enumeration value="@id/textView4" />
+            <xs:enumeration value="@id/textView5" />
+            <xs:enumeration value="@id/textView6" />
             <xs:enumeration value="@android:id/accessibilityActionContextClick" />
             <xs:enumeration value="@android:id/accessibilityActionScrollDown" />
             <xs:enumeration value="@android:id/accessibilityActionScrollLeft" />

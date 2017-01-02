@@ -15,7 +15,7 @@ namespace MnemonicPwManager
     {
         NumberPicker _wordLengthPicker;
         Spinner _bookSpinner;
-        public string TextMaterial { get; private set; }
+        string _textMaterial;
         
         protected override void OnCreate(Bundle bundle)
         {
@@ -44,7 +44,6 @@ namespace MnemonicPwManager
             numbers.MaxValue = _wordLengthPicker.Value;
             numbers.MinValue = 0;
             numbers.Enabled = false;
-
             //Enable numbers for selection.
             Switch numberSwitch = FindViewById<Switch>(Resource.Id.numberSwitch);
             numberSwitch.CheckedChange += (sender, e)=>
@@ -54,7 +53,6 @@ namespace MnemonicPwManager
                 else
                     numbers.Enabled = false;
             };
-
             //Changes numbers max-amount according to wordlength.
             _wordLengthPicker.ValueChanged += delegate
             {
@@ -66,7 +64,7 @@ namespace MnemonicPwManager
         {
             EditText randomWordText = FindViewById<EditText>(Resource.Id.passwordText);
             EditText mnemonicSentence = FindViewById<EditText>(Resource.Id.mnemonicText);
-            RandomWord randomWord = new RandomWord(NumberOfLetters(), TextMaterial, UseNumbersInPassword(),UseNumbersInPassword() ? AmountOfNUmbers() : 0 );
+            RandomWord randomWord = new RandomWord(NumberOfLetters(), _textMaterial, UseNumbersInPassword(),UseNumbersInPassword() ? AmountOfNumbers() : 0 );
             randomWordText.Text = randomWord.NewWord;
             mnemonicSentence.Text = randomWord.NewSentence;
         }
@@ -86,7 +84,7 @@ namespace MnemonicPwManager
             Switch numberSwitch = FindViewById<Switch>(Resource.Id.numberSwitch);
             return numberSwitch.Checked ? true : false;
         }
-        protected int AmountOfNUmbers()
+        protected int AmountOfNumbers()
         {
             NumberPicker numbers = FindViewById<NumberPicker>(Resource.Id.numberPickerNumbers);
             return numbers.Value;
@@ -97,12 +95,12 @@ namespace MnemonicPwManager
             if (_bookSpinner.SelectedItem.Equals("The Iliad by Homer (Available offline)"))
                 using (StreamReader sr = new StreamReader(assets.Open("Iliad.txt")))
                 {
-                    TextMaterial = sr.ReadToEnd();
+                    _textMaterial = sr.ReadToEnd();
                 }
             else if (_bookSpinner.SelectedItem.Equals("Crime and punishment by Fyodor Dostoyevsky (Available offline)"))
                 using (StreamReader sr = new StreamReader(assets.Open("CrimeAndPunishment.txt")))
                 {
-                    TextMaterial = sr.ReadToEnd();
+                    _textMaterial = sr.ReadToEnd();
                 }
             else
                 DownloadAsync(_bookSpinner.SelectedItem.ToString());
@@ -117,13 +115,13 @@ namespace MnemonicPwManager
                     Task<string> getString;
                     switch (bookTitle)
                     {
-                        case "The Odyssey by Homer(Online resource)":
-                            getString = client.DownloadStringTaskAsync("http://www.gutenberg.org/cache/epub/1727/pg1727.txt");
-                            TextMaterial = await getString;
+                        case "Siddhartha by Hermann Hesse (Online resource)":
+                            getString = client.DownloadStringTaskAsync("http://www.gutenberg.org/cache/epub/2500/pg2500.txt");
+                            _textMaterial = await getString;
                             break;
                         case "The Trial by Franz Kafka (Online resource)":
                             getString = client.DownloadStringTaskAsync("http://www.gutenberg.org/cache/epub/7849/pg7849.txt");
-                            TextMaterial = await getString;
+                            _textMaterial = await getString;
                             break;
                         default:
                             break;

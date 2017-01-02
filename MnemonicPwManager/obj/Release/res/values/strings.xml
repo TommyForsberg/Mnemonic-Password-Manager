@@ -1,1 +1,1 @@
-<resources><string name="Hello">Hello World, Click Me!</string><string name="ApplicationName">MnemonicPwManager</string></resources>
+<resources><string-array name="BookChoices"><item>The Iliad by Homer (Available offline)</item><item>Crime and punishment by Fyodor Dostoyevsky (Available offline)</item><item>Siddhartha by Hermann Hesse (Online resource)</item><item>The Trial by Franz Kafka (Online resource)</item></string-array><string name="ApplicationName">MnemonicPwManager</string></resources>

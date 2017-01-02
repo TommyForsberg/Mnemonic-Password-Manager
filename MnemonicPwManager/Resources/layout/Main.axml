@@ -24,7 +24,7 @@
         android:id="@+id/textView4" />
     <Spinner
         android:layout_width="match_parent"
-        android:layout_height="76.5dp"
+        android:layout_height="70.5dp"
         android:id="@+id/bookSpinner" />
     <Switch
         android:layout_width="match_parent"
@@ -39,10 +39,10 @@
         android:layout_marginTop="0.0dp" />
     <TextView
         android:text="Generated Password"
-        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textAppearance="?android:attr/textAppearanceMedium"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/textView1" />
+        android:id="@+id/textView5" />
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -50,10 +50,10 @@
         android:layout_marginBottom="0.0dp" />
     <TextView
         android:text="Generated Mnemonics"
-        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textAppearance="?android:attr/textAppearanceMedium"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/textView2" />
+        android:id="@+id/textView6" />
     <EditText
         android:layout_width="match_parent"
         android:layout_height="78.0dp"

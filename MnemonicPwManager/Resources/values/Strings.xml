@@ -3,7 +3,7 @@
     <string-array name="BookChoices">
       <item>The Iliad by Homer (Available offline)</item>
       <item>Crime and punishment by Fyodor Dostoyevsky (Available offline)</item>
-      <item>The Odyssey by Homer (Online resource)</item>
+      <item>Siddhartha by Hermann Hesse (Online resource)</item>
       <item>The Trial by Franz Kafka (Online resource)</item>
     </string-array>
     <string name="ApplicationName">MnemonicPwManager</string>

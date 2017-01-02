@@ -31,5 +31,6 @@ C:\Users\Tommy\Documents\Visual Studio 2015\Projects\MnemonicPwManager\MnemonicP
 C:\Users\Tommy\Documents\Visual Studio 2015\Projects\MnemonicPwManager\MnemonicPwManager\obj\Release\android\assets\System.Runtime.Serialization.dll.mdb
 C:\Users\Tommy\Documents\Visual Studio 2015\Projects\MnemonicPwManager\MnemonicPwManager\obj\Release\android\assets\System.ServiceModel.Internals.dll.mdb
 C:\Users\Tommy\Documents\Visual Studio 2015\Projects\MnemonicPwManager\MnemonicPwManager\obj\Release\android\assets\System.Xml.dll.mdb
+C:\Users\Tommy\Documents\Visual Studio 2015\Projects\MnemonicPwManager\MnemonicPwManager\obj\Release\MnemonicPwManager.csprojResolveAssemblyReference.cache
 C:\Users\Tommy\Documents\Visual Studio 2015\Projects\MnemonicPwManager\MnemonicPwManager\obj\Release\MnemonicPwManager.dll.mdb
 C:\Users\Tommy\Documents\Visual Studio 2015\Projects\MnemonicPwManager\MnemonicPwManager\bin\Release\MnemonicPwManager.dll.mdb
