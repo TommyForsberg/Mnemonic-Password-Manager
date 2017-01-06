@@ -1,4 +1,0 @@
-MnemonicPwManager.MainActivity, MnemonicPwManager;md527387eae5ef7340f4831f784646ba7ca.MainActivity
-MnemonicPwManager.MainActivity, MnemonicPwManager, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md527387eae5ef7340f4831f784646ba7ca.MainActivity
-MnemonicPwManager.MainActivity;md527387eae5ef7340f4831f784646ba7ca.MainActivity
-mnemonicpwmanager.MainActivity;md527387eae5ef7340f4831f784646ba7ca.MainActivity
