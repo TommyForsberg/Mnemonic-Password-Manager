@@ -39,7 +39,7 @@ namespace MnemonicPwManager
            
             _wordLengthPicker = FindViewById<NumberPicker>(Resource.Id.numberPicker);
             _wordLengthPicker.MaxValue = 80;
-            _wordLengthPicker.MinValue = 8;
+            _wordLengthPicker.MinValue = 2 ;
             NumberPicker numbers = FindViewById<NumberPicker>(Resource.Id.numberPickerNumbers);
             numbers.MaxValue = _wordLengthPicker.Value;
             numbers.MinValue = 0;
@@ -53,10 +53,10 @@ namespace MnemonicPwManager
                 else
                     numbers.Enabled = false;
             };
-            //Changes numbers max-amount according to wordlength.
+            //Changes numbers max-amount according to wordlength -2 for exceptionhandling .
             _wordLengthPicker.ValueChanged += delegate
             {
-                numbers.MaxValue = _wordLengthPicker.Value;
+                numbers.MaxValue = _wordLengthPicker.Value -2;
             };
         }
 

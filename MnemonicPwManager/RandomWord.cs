@@ -15,7 +15,7 @@ using System.IO;
 
 namespace MnemonicPwManager
 {
-    class RandomWord
+    public class RandomWord
     {
         int _wordLength;
         List<string> _passwordMnemonics;
